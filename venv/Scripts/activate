@@ -38,7 +38,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="C:\Users\ankan\Documents\jsHTML\jsHTML\venv"
+VIRTUAL_ENV="C:\Users\ankan\source\repos\jsHTML\venv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
