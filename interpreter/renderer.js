@@ -5,6 +5,9 @@ window.addEventListener('hashchange', function(){
 RenderPage();
 });
 
+
+  
+
 function RenderPage(){
     var path = document.location.href;
 
@@ -17,12 +20,23 @@ function RenderPage(){
         currPage = 'index'
     }
 
+    fetch('/pages/'+currPage+'.jshtm')
+    .then(response => response.ok)
+    .then((data) => {
+        if(data == false){
+            currPage = '404';
+        }
+    console.log(currPage)});
+
     if(currPage == ''){
         currPage = 'index';
     }
     //log
     console.log(currPage);
     //
+
+    // TODO 404 CATCH
+    
     fetch('/pages/'+currPage+'.jshtm')
     .then(response => response.text())
     .then((data) => {
