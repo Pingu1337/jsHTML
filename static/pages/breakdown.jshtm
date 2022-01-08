@@ -28,7 +28,7 @@
 
     .container .txt-box{
         text-align: left;
-        width: 450px;
+        width: auto;
         margin-left: auto;
         margin-right: auto;
         font-size: 1.02rem;
