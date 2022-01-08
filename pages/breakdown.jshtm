@@ -1,0 +1,36 @@
+<div class="flex-row">
+    <div class="container">
+        <h1>How does jsHTML work?</h1>
+        <hr>
+        <div class="txt-box">
+        <p>jsHTML is a one page based framework with a routing system that tries to mimic <a href="https://dotnet.microsoft.com/en-us/apps/aspnet" target="_blank">ASP.NET</a>.
+        <br>ASP.NET uses <i>.cshtml</i> and <i>.razor</i> files to render HTML on the main page while jsHTML uses <i>.jshtm</i> files to render the content on the index.html page.
+        <br>
+        <br>
+            For example this page is written in the file <i>'breakdown.jshtm'</i> and the JavaScript router selects this file and routes it to the index.html page to be rendered as the page content.
+            <br> But if you click <a href="#about">here</a> the JavaScript router will render the <i>'about.jshtm'</i> file instead.
+        </p>
+        </div>
+    </div>
+</div>
+
+<style>
+    .container{
+        text-align: center;
+        padding: 30px;
+        width: 600px;
+        height: 420px;
+        border:1px solid rgba(0, 0, 0, 0);;
+        border-radius: 20px;
+        box-shadow: 4px 3px 9px rgba(0, 0, 0, .1);
+        background: #fdfdfd
+    }
+
+    .container .txt-box{
+        text-align: left;
+        width: 450px;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 1.02rem;
+    }
+</style>

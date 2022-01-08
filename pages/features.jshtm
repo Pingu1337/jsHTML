@@ -1,0 +1,53 @@
+
+<div class="flex-row">
+  <div class="container">
+      <h1>jsHTML Features</h1>
+      <hr>
+      <div class="txt-box">
+        <ul class="list-group" style="width: 200px;">
+          <li class="list-group-item"><a href="#features/shared-layout">Shared layout</a></li>
+          <li class="list-group-item"><a href="#features/one-page-website">One page website</a></li>
+          <li class="list-group-item">No replicating code</li>
+          <li class="list-group-item">Customizable</li>
+          <li class="list-group-item">Supports JavaScript</li>
+        </ul>
+        <ul class="list-group" style="width: 200px;">
+          <li class="list-group-item">Fast "page" loading</li>
+          <li class="list-group-item">Easy to learn</li>
+          <li class="list-group-item">Easy to use</li>
+          <li class="list-group-item"><a href="#github">Open Source</a></li>
+          <li class="list-group-item">Free</li>
+        </ul>
+      </div>
+  </div>
+</div>
+
+<style>
+  .container{
+      text-align: center;
+      padding: 30px;
+      width: 600px;
+      height: 420px;
+      border:1px solid rgba(0, 0, 0, 0);;
+      border-radius: 20px;
+      box-shadow: 4px 3px 9px rgba(0, 0, 0, .1);
+      background: #fdfdfd
+  }
+
+  .container .txt-box{
+      display: flex;
+      justify-content: space-evenly;
+      text-align: left;
+      width: 450px;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: 1.02rem;
+  }
+  .container .txt-box a{
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.8);
+  }
+  .container .txt-box a:hover{
+    color: rgba(0, 0, 0, 1);
+  }
+</style>
