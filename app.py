@@ -1,4 +1,5 @@
 from flask import Flask, jsonify, request, render_template
+
 from flaskext.mysql import MySQL
 
 app = Flask(__name__)
