@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
 
-    <!-- <script src="{{ url_for('static',filename='interpreter/main.js') }}"></script> -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="{{ url_for('static',filename='interpreter/renderer.js') }}"></script>
+    <script src="{{ url_for('static',filename='interpreter/main.js') }}"></script>
     <title>jsHTML</title>
 </head>
 
@@ -39,6 +40,16 @@
         <main id="jsRenderRoot-Parent">
             <div id="jsMain-content"></div>
             <span id="jsRenderRoot-Child"></span>
+            //button
+            <div class='container'>
+                <h3>Test</h3>
+                  <form>
+                      <a href=# id=test><button class='btn btn-default'>Test</button></a>
+                      <a href=# id=gettest><button class='btn btn-default'>GET</button></a>
+                      
+                  </form>
+                  <input type="text" id="txtinput" name="test">
+            </div>
         </main>
 
     <footer></footer>

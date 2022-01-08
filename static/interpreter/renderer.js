@@ -48,7 +48,6 @@ function RenderPage(){
     var Child = document.getElementById('jsRenderRoot-Child');
     
     Parent.replaceWith(element, Child);
-    console.log(jshtmlData);
     });
     
 }
