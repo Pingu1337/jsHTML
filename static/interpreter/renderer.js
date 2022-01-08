@@ -5,7 +5,11 @@ window.addEventListener('hashchange', function(){
 RenderPage();
 });
 
+var fourofour;
 
+fetch('/static/pages/404.jshtm')
+.then(response => response.text())
+.then((data_404) =>{ fourofour = data_404});
   
 
 function RenderPage(){
@@ -20,27 +24,23 @@ function RenderPage(){
         currPage = 'index'
     }
 
-    fetch('/pages/'+currPage+'.jshtm')
-    .then(response => response.ok)
-    .then((data) => {
-        if(data == false){
-            currPage = '404';
-        }
-    console.log(currPage)});
-
     if(currPage == ''){
         currPage = 'index';
     }
     //log
-    console.log(currPage);
+    //console.log(currPage);
     //
-
-    // TODO 404 CATCH
-    
-    fetch('/pages/'+currPage+'.jshtm')
+    var jshtmlData;
+    fetch('/static/pages/'+currPage+'.jshtm')
     .then(response => response.text())
-    .then((data) => {
-    var jshtmlData = data;
+    .then((data) => { 
+        if(data.includes('<title>404 Not Found</title>')){
+            jshtmlData = fourofour;
+        }
+        else{
+            jshtmlData = data;
+        }
+    
     var element = document.createElement('div');
     element.setAttribute("id", "jsMain-content")
     element.innerHTML = jshtmlData;
@@ -48,6 +48,7 @@ function RenderPage(){
     var Child = document.getElementById('jsRenderRoot-Child');
     
     Parent.replaceWith(element, Child);
+    console.log(jshtmlData);
     });
     
 }

@@ -1,7 +1,7 @@
 
 <div class="main-content flex-row">
     <div class="card mx-5" style="width: 25rem; height: 40rem;">
-        <img src="/wwwroot/img/JavaScript.png" class="card-img-top" alt="js">
+        <img src="/static/img/JavaScript.png" class="card-img-top" alt="js">
         <div class="card-body">
           <h5 class="card-title">jsHTML</h5>
           <p class="card-text">jsHTML is a one page based framework with a routing system that tries to mimic <a href="https://dotnet.microsoft.com/en-us/apps/aspnet" target="_blank">ASP.NET</a>.
@@ -11,7 +11,7 @@
       </div>
 
       <div class="card mx-5" style="width: 25rem; height: 40rem;">
-        <img src="/wwwroot/img/web-dev-2.jpg" class="card-img-top" alt="...">
+        <img src="/static/img/web-dev-2.jpg" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">Web development made easier</h5>
           <p class="card-text">jsHTML is both a lightweight framework and super easy to use. 
@@ -22,7 +22,7 @@
         </div>
       </div>
       <div class="card mx-5" style="width: 25rem; height: 40rem;">
-        <img src="/wwwroot/img/Bootstrap_logo.png" class="card-img-top" alt="..." style="background-image: url('/wwwroot/img/Bootstrap_logo.png'); background-size: 130% 130%; background-position: center;">
+        <img src="/static/img/Bootstrap_logo.png" class="card-img-top" alt="..." style="background-image: url('/wwwroot/img/Bootstrap_logo.png'); background-size: 130% 130%; background-position: center;">
         <div class="card-body">
           <h5 class="card-title">jsHTML comes with Bootstrap</h5>
           <p class="card-text">Bootstrap is included with the jsHTML project so you can get up and running even faster.
