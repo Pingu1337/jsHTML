@@ -4,7 +4,7 @@ import MySQLdb.cursors
 import re
 import os
 from dotenv import load_dotenv
-
+from passlib.hash import argon2
 
 load_dotenv()
 
@@ -33,14 +33,17 @@ def login():
       if flask.request.method == 'POST' and 'username' in flask.request.form and 'password' in flask.request.form:
             # Create variables for easy access
             username = flask.request.form['username']
-            password = flask.request.form['password']
-            # Check if account exists using MySQL
-            cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
-            cursor.execute('SELECT * FROM Users WHERE Username = %s AND Password = %s', (username, password,))
-            # Fetch one record and return result
-            account = cursor.fetchone()
-            # If account exists in accounts table in out database
-            if account:
+            rawpw = flask.request.form['password']
+
+            cursor = mysql.connection.cursor(MySQLdb.cursors.SSDictCursor)
+            cursor.execute('SELECT * FROM Users WHERE Username = %s', [username])
+            result = cursor.fetchone()
+            arg2_hash = result['Password']
+               
+            Decrypt_Match = argon2.verify(rawpw, arg2_hash)
+         
+            if Decrypt_Match:
+               account = result
                # Create session data, we can access this data in other routes
                flask.session['loggedin'] = True
                flask.session['id'] = account['ID']
@@ -50,7 +53,7 @@ def login():
             else:
                # Account doesnt exist or username/password incorrect
                msg = 'Incorrect username/password!'
-               #Show the login form with message (if any)
+               # Show the login form with message (if any)
       return flask.render_template('loginform.html', msg=msg)
 
 @app.route('/register')

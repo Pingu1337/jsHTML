@@ -13,6 +13,7 @@
         <script src="{{ url_for('static',filename='interpreter/main.js') }}"></script>
 	</head>
 	<body>
+		{% block Register %}
 		<div class="login-form">
 			<h1>Login</h1>
 			<form action="/login" method="post">
@@ -27,25 +28,6 @@
 				<button type="submit" class="btn btn-primary" value="Login">Submit</button>
 			</form>
 		</div>
-		<!-- <div class="login">
-			{% block Register %}
-			<div class="links">
-				<a href="/login" class="active">Login</a>
-				<a href="/register">Register</a>
-			</div>
-			<form action="/login" method="post">
-				<label for="username">
-					<i class="fas fa-user"></i>
-				</label>
-				<input type="text" name="username" placeholder="Username" id="username" required>
-				<label for="password">
-					<i class="fas fa-lock"></i>
-				</label>
-				<input type="password" name="password" placeholder="Password" id="password" required>
-				<div class="msg">{{ msg }}</div>
-				<input type="submit" value="Login">
-			</form>
-			{% endblock %}
-		</div> -->
+		{% endblock %}
 	</body>
 </html>
