@@ -6,5 +6,3 @@ window.addEventListener('load', (event) => {
     document.head.appendChild(jshtml);
 });
 
-
-

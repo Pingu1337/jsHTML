@@ -63,4 +63,22 @@ main {
       -ms-flex-pack: center;
           justify-content: center;
 }
+
+.login-links {
+  float: right;
+  margin-right: 40px;
+  padding: 5px;
+}
+
+.login-links a {
+  text-decoration: none;
+  padding-left: 10px;
+  color: rgba(0, 0, 0, 0.5);
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.login-links a:hover {
+  color: black;
+}
 /*# sourceMappingURL=styles.css.map */
